@@ -6,6 +6,10 @@ Author: Kir
 Version: 1.0
 */
 
+if( ! defined('ABSPATH' ) ){
+    die('No.');
+}
+
 //Registers plugins options page
 function op_add_options_page(){
     add_settings_section( 'op_main_section', 'Options', '', 'op_options_page' );
