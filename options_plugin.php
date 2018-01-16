@@ -32,6 +32,7 @@ function op_show_options_page_content(){
 	<?php
 }
 
+//Outputs plugins submenu page content
 function op_show_subpage_content(){
     ?>
     <div class="wrap">
@@ -48,6 +49,7 @@ function op_show_subpage_content(){
     <?php
 }
 
+//Form data processing without settings api
 function op_process_form(){
     if( isset( $_POST['select_value'] ) && isset ( $_POST['text_input'] ) ){
 	    $clean_options['checkbox_value']    = isset( $_POST['checkbox_value'] ) ? 1 : 0;
@@ -71,6 +73,7 @@ function op_register_options(){
 
 }
 
+//Fills checkbox on options page
 function op_fill_checkbox(){
 	$op_options = get_option( 'op_options' );
     ?>
@@ -78,6 +81,7 @@ function op_fill_checkbox(){
     <?php
 }
 
+//Fills select on options page
 function op_fill_select(){
     $op_options = get_option( 'op_options' );
     ?>
@@ -89,6 +93,7 @@ function op_fill_select(){
     <?php
 }
 
+//Fills text input on options page
 function op_fill_input(){
 	$op_options = get_option( 'op_options' );
     ?>
