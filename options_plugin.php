@@ -53,8 +53,8 @@ function op_show_subpage_content(){
 function op_process_form(){
     if( isset( $_POST['select_value'] ) && isset ( $_POST['text_input'] ) ){
 	    $clean_options['checkbox_value']    = isset( $_POST['checkbox_value'] ) ? 1 : 0;
-	    $clean_options['select_value']      = filter_var( $_POST['select_value'] );
-	    $clean_options['text_input']        = filter_var( $_POST['text_input'] );
+	    $clean_options['select_value']      = filter_var( $_POST['select_value'], FILTER_SANITIZE_STRING );
+	    $clean_options['text_input']        = filter_var( $_POST['text_input'], FILTER_SANITIZE_STRING );
 	    update_option( 'op_options', $clean_options );
     }
 }
